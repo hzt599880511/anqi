@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>anqi</title>
+		<style>
+			.tbhz {
+				width: 100%;
+				background-color: aquamarine;
+			}
+
+			.tbnr {
+				width: 900px;
+				height: 120px;
+				margin: auto;
+				display: flex;
+			}
+
+			audio {
+				/* display: none; */
+			}
+
+			.gp {
+				width: 180px;
+				height: 120px;
+				display: flex;
+				align-items: center;
+				margin: 0 0 0 10px;
+			}
+
+			.gphz {
+				position: relative;
+				animation-name: gpxz;
+				animation-duration: 10s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+
+			.gpt {
+				width: 110px;
+				height: 110px;
+				animation-name: gpxz;
+				animation-duration: 10s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+
+			/* 动画 */
+			@keyframes gpxz {
+				from {
+					transform: rotate(0deg);
+				}
+
+				to {
+					transform: rotate(360deg);
+				}
+			}
+
+			/* 动画 */
+			.txhz {
+				width: 110px;
+				height: 110px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.tx {
+				width: 55px;
+				height: 55px;
+				border-radius: 50%;
+			}
+
+			.wenzi {
+				padding: 20px 0;
+			}
+
+			.gm {
+				width: 600px;
+				font-size: 35px;
+				padding: 0 20px;
+			}
+
+			.zf {
+				width: 650px;
+				text-align: right;
+				font-size: 25px;
+			}
+			
+			/* 页脚 */
+			.yjhz{
+				width: 100%;
+				position: absolute;
+				background-color: aquamarine;
+				left: 0px;
+				bottom: 0px;
+			}
+			.yjnr{
+				width: 900px;
+				height: 160px;
+				margin: auto;
+				position: relative;
+			}
+			.yjnr img{
+				position: absolute;
+				right: 0px;
+				top: -200px;
+				width: 200px;
+				position: absolute;
+				right: 20px;
+			}
+			.js{
+				width:200px;
+				text-align: center;
+				position: absolute;
+				right: 2px;
+				top: 120px;
+			}
+			/* 正文内容 */
+			.zwhz{
+				width: 100%;
+				height: calc(100vh - 290px);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.zwnr{
+				width: 500px;
+				font-size: 40px;
+				letter-spacing: 5px;
+				line-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<audio id="mu" src="img/bgm.mp3" autoplay loop></audio>
+		<div class="tbhz">
+			<div class="tbnr">
+				<div class="gp">
+					<div class="gphz">
+						<img src="img/gp.png" class="gpt">
+						<div class="txhz">
+							<img src="img/tx.jpg" class="tx">
+						</div>
+					</div>
+				</div>
+				<div class="wenzi">
+					<div class="gm">
+						⟪ 小幸运 ⟫
+					</div>
+					<div class="zf">
+						—— 送 给 安 祈
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="zwhz">
+			<div class="zwnr">
+				与你相遇好幸运<br>
+				但愿在我看不到的天际<br>
+				你张开了双翼<br>
+				遇见你的注定<br>
+				她会有多幸运<br>
+				<img src="img/bt.gif" alt="">
+			</div>
+		</div>
+		<div class="yjhz">
+			<div class="yjnr">
+				<img src="img/chh.png" alt="">
+				<div class="js">
+					2022.10.03
+				</div>
+			</div>
+		</div>
+		<script>
+			var mu = document.getElementById("mu");
+			window.onload = function() {
+				setInterval("toggleSound()", 1);
+			}
+
+			function toggleSound() {
+				var mu = document.getElementById("mu");
+				if (mu.paused) {
+					mu.paused = false;
+					mu.play();
+				}
+			}
+		</script>
+	</body>
+</html>
